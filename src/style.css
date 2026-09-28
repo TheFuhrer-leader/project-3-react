@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #111;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.header nav {
+  display: flex;
+  gap: 25px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #ddd;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.stats {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.stats h2,
+.workouts h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.workouts {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.workout-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.workout-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.workout-card ul {
+  padding-left: 20px;
+}
+
+.workout-card li {
+  margin-bottom: 8px;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workout-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+}
